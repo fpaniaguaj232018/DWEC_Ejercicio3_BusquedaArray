@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/estilo.css">
+    <title>(Título del documento)</title>
+    <script>
+    var palabras = ["Perro", "PUlGa", "OSO", " tiGre", "loBO "];
+    function buscar(){
+        var palabra = 
+            document.getElementById("nombre").value;
+        var i;
+        for (i=0;i<palabras.length;i++){
+            if(palabras[i].toUpperCase().trim()==palabra.toUpperCase().trim()){
+                break;
+            } 
+        }
+        alert(i==palabras.length? "No encontrado" : "Encontrado");
+    }
+
+
+    </script>
+</head>
+<body>
+    <H1>PROYECTO BASE</H1>
+    <input type="text" id="nombre" placeholder="Introduce la palabra a buscar">
+    <input type="button" value="Buscar" onclick="buscar()">
+</body>
+</html>
